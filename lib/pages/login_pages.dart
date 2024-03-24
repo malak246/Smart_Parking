@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_1/component/my_button.dart';
 import 'package:flutter_application_1/component/my_textfield.dart';
 import 'package:flutter_application_1/component/squar_title.dart';
+import 'package:animated_text_kit/animated_text_kit.dart';
 
 
 class LoginPage extends StatelessWidget {
@@ -26,16 +27,25 @@ class LoginPage extends StatelessWidget {
               const SizedBox(height: 50),
 
               // logo
-              const Icon(
-                Icons.lock,
-                size: 100,
-              ),
-
+              
+                SizedBox(
+                        width: 250.0,
+                        child: TextLiquidFill(
+                          text: 'Smart Parking App',
+                          waveColor: Colors.blueAccent,
+                          boxBackgroundColor: Colors.redAccent,
+                          textStyle: const TextStyle(
+                            fontSize: 80.0,
+                            fontWeight: FontWeight.bold,
+                          ),
+                          boxHeight: 300.0,
+                        ),
+                      ),
               const SizedBox(height: 50),
 
               // welcome back, you've been missed!
               Text(
-                'Welcome back you\'ve been missed!',
+                'Smart Parking App',
                 style: TextStyle(
                   color: Colors.grey[700],
                   fontSize: 16,
